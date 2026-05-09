@@ -13,7 +13,8 @@ server {
     set $upstream "${ORIGIN}";
 
     # Basic hardening / sane defaults
-    client_max_body_size 50m;
+    client_max_body_size 500m;
+    client_body_timeout 300s;
 
     # Proxy headers
     location / {
